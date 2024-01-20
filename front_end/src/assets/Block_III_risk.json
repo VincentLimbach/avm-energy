@@ -1,0 +1,8 @@
+[
+    {"id": 1, "title": "Wie hoch schätzen Sie das Erfolgspotenzial durch eine langfristige Kooperation ein (bspw. durch Planungssicherheit vertraglicher Bindungen)?"},
+    {"id": 2, "title": "Wie hoch schätzen Sie den Risikograd durch die langfristige Kooperation ein (bspw. durch Lock-in-Effekte)?"},
+    {"id": 3, "title": "Wie hoch schätzen Sie das Erfolgspotenzial durch den Vernetzungsgrad mit den Kooperationspartnern ein (bspw. durch Vertrauensbasis und Kompatibilität zwischen den Kooperationspartnern)?"},
+    {"id": 4, "title": "Wie hoch schätzen Sie den Risikograd durch den Vernetzungsgrad mit den Kooperationspartnern ein (bspw. Verlust der Eigenständigkeit durch Abhängigkeitsverhältnis)?"},
+    {"id": 5, "title": "Wie hoch schätzen Sie das Erfolgspotenzial durch die Offenheit des Netzwerks für Außenstehende ein (bspw. unkomplizierte Erweiterung der Kooperation bei Kompetenzbedarf)?"},
+    {"id": 6, "title": "Wie hoch schätzen Sie den Risikograd durch die Offenheit des Netzwerks für Außenstehende ein (bspw. Gefahr der Überfrachtung des Netzwerks oder der Unverbindlichkeit von Kooperationspartnern)?"}
+  ]

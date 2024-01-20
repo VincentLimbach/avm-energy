@@ -1,0 +1,23 @@
+[
+    {
+      "id": 36,
+      "title": "Langfristigkeit",
+      "definition": "Stabilität bzw. Dauerhaftigkeit des Netzwerks"
+    },
+    {
+      "id": 37,
+      "title": "Dichte",
+      "definition": "Vernetzungsgrad der Kooperationspartner des Netzwerks"
+    },
+    {
+      "id": 38,
+      "title": "Erweiterbarkeit",
+      "definition": "Grad der Offenheit des Netzwerks für Außenstehende"
+    },
+    {
+      "id": 39,
+      "title": "Netzwerkgröße",
+      "definition": "Anzahl der Kooperationspartner und der Nutzer des Netzwerks"
+    }
+  ]
+  

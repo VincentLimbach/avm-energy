@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('./../../public/fonts/TUMNeueHelvetica-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    @apply bg-gray-100;
+    font-family: 'CustomFont', sans-serif; 
+
+}
+
+
+/* CSS */
+.my-text {
+    @apply text-xs;
+}
+
+@media (max-width: 600px) {
+    .my-text {
+        font-size: 0.8rem;
+    }
+}
+
+.chart-border {
+    border: 1px solid gray;
+    padding: 15px;
+    background-color: bg-gray-200;
+  }
+
+
+.pointer {
+  position: absolute;
+  top: -15px;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.keyword {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 300px;
+  display: none;
+  z-index: 1;
+}
+
+.tooltip-container:hover .tooltip {
+  display: block;
+}
+
+.base_page {
+  max-width: 90%;
+  margin-bottom: 1%;
+  margin-left: 5%;
+}
+
+.headline {
+  font-size: 1.5rem; 
+  font-weight: bold;
+  margin-bottom: 2.5%;
+  text-align: center;
+}
+
+.gold-rounded-border {
+  border: 2px solid #FFFFFF; /* Gold color */
+  border-radius: 8px; /* Adjust the radius as needed for the rounded effect */
+}
+
+.gold-underline {
+  text-decoration: underline;
+  text-decoration-color: #F9BB00; /* Gold color */
+}
+
+
+/* global.css */
+.textBox {
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 10px;
+  flex: 1;
+  background-color: white; /* Add a white background */
+}
+
+/* global.css */
+.box {
+  border: 1px solid #000;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #F9BB00; /* Example button color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #F9BB00;
+}
