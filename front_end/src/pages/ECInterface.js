@@ -47,7 +47,10 @@ const ECInterface = () => {
 
   return (
     <div className='base_page flex flex-col justify-center items-center'>
-      <p className='textBox' id={`component-0`}>Willkommen beim Abschnitt <strong>Energy Communities</strong> auf SolarSimplify – Ihrer komfortablen Lösung für die Integration von Solarenergie in Ihren Alltag! Hier können sie sich mit anderen Menschen zu Energy Communities zusammenschließen, um gemeinsam einen wichtigen Beitrag zur Energiewende beizutragen.</p>
+      <p className='textBox' id={`component-0`}>
+        Willkommen beim Abschnitt <strong>Energy Communities</strong> auf SolarSimplify – Ihrer komfortablen Lösung für die Integration von Solarenergie in Ihren Alltag! Hier können sie sich mit anderen Menschen zu Energy Communities zusammenschließen, um gemeinsam einen wichtigen Beitrag zur Energiewende beizutragen.<br/><br/>
+        Hier bieten wir Ihnen ein Portal zur Gründung oder zum Beitritt von <strong>Energy Communities</strong>, auch bekannt als &quot;Erneuerbare Energiegemeinschaften&quot; (Renewable Energy Communities, RECs), an. Dieses fortschrittliche Konzept ermöglicht es Gruppen von Bürgern, Unternehmen und lokalen Behörden, gemeinsam in die Produktion und Verwaltung erneuerbarer Energiequellen zu investieren. Diese Gemeinschaften entstehen oft um ein zentrales Projekt – beispielsweise den Bau einer Photovoltaikanlage. Ein Mitglied stellt dabei häufig die benötigte Fläche zur Verfügung, während andere Mitglieder das erforderliche Kapital beisteuern. Durch solche gemeinsamen Anstrengungen entstehen reale Werte in unmittelbarer Nähe der beteiligten Mitglieder. Die daraus resultierenden Einnahmen – sei es durch die Einspeisung von Strom ins Netz oder durch die Reduktion der Energiekosten für angeschlossene Haushalte – werden dann entsprechend der Beteiligung unter den Mitgliedern aufgeteilt.<br/>
+        </p>
       <GoldenBox text="Haben Sie schon einen Account oder wollen Sie einen Account erstellen?" />
       {(
         <ToggleButtonBar

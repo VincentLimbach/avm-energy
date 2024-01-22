@@ -8,7 +8,7 @@ type GewerblichComponentProps = {
 };
 
 const GewerblichComponent: React.FC<GewerblichComponentProps> = ({ setList, componentList, posIndex }) => {
-  const options = ['Ein- oder Zweifamilienhaus', 'Mehrfamilienhaus', 'Firmengebäude', 'Sonstige'];
+  const options = ['Einfamilienhaus', 'Mehrfamilienhaus', 'Firmengebäude', 'Sonstige'];
   const activeIndex = options.indexOf(componentList[posIndex] as string);
   return (
     <div id={`component-${posIndex}`}>

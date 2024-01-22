@@ -52,7 +52,10 @@ const HomePage: React.FC = () => {
   console.log(componentList)
   return (
     <div className='base_page flex flex-col justify-center items-center'>
-      <p className='textBox' id={`component-0`}>Willkommen beim Abschnitt <strong>Hintergrund und Finanzierung</strong> auf SolarSimplify – Ihrer komfortablen Lösung für die Integration von Solarenergie in Ihren Alltag! Hier finden sie alle rechtlichen, finanziellen und technischen Informationen zu ihrem neuen Projekt.</p>
+      <p className='textBox' id={`component-0`}>
+        Willkommen beim Abschnitt <strong>Hintergrund und Finanzierung</strong> auf SolarSimplify – Ihrer komfortablen Lösung für die Integration von Solarenergie in Ihren Alltag! Hier finden sie alle rechtlichen, finanziellen und technischen Informationen zu ihrem neuen Projekt.<br/><br/>
+        Im Abschnitt <strong>Hintergrund und Finanzierung</strong> konzentrieren wir uns darauf, Ihnen fundierte, lokal relevante Informationen zu bieten, die auf Ihren individuellen Eingaben basieren. Sobald Sie beispielsweise Ihr Besitzverhältnis zur relevanten Fläche angeben, generiert unser System die entsprechenden Informationen. Wir stellen Ihnen hierbei rechtlich geprüfte Erklärungen der gesetzlichen Bestimmungen für Solarenergie in Deutschland und München zur Verfügung. Zusätzlich behandeln wir sowohl die Ihnen zur Verfügung stehenden technischen als auch finanziellen Optionen, wodurch SolarSimplify sämtliche relevanten Aspekte abdeckt. Hiermit zielen wir insbesondere darauf ab, die Komplexität des Solarstrommarktes zu entmystifizieren und Ihnen einen klaren Einblick zu gewähren. Zusätzlich errechnen wir schnell und diskret eine realistische Kostenschätzung anhand verifizierter lokaler Preise verschiedener Anbieter.<br/>
+        </p>
       <GoldenBox text="Was ist Ihr Besitzverhältnis zu den Fächen?" />
       <ToggleButtonBar
         options={['Mieter', 'Pächter', 'Eigentümer']}

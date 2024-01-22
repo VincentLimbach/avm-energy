@@ -8,7 +8,7 @@ type EigenheimComponentProps = {
 };
 
 const EigenheimComponent: React.FC<EigenheimComponentProps> = ({ setList, componentList, posIndex }) => {
-  const options = ["Ein/Zweifamilienhaus", "Mehrfamilienhaus", "Sonstiges"];
+  const options = ["Einfamilienhaus", "Mehrfamilienhaus", "Sonstiges"];
   const activeIndex = options.indexOf(componentList[posIndex] as string);
 
   return (
