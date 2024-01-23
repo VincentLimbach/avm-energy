@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import 'styles/global.css';
 import type { AppProps } from 'next/app';
@@ -6,9 +6,17 @@ import { DefaultLayout } from 'components/ui/layouts/Default';
 import 'devextreme/dist/css/dx.light.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
-	const [landingPageShown, setLandingPageShown] = useState(true);
+	const [landingPageShown, setLandingPageShown] = useState(false);
+
+	useEffect(() => {
+		const hasVisited = localStorage.getItem('hasVisited');
+		if (!hasVisited) {
+			setLandingPageShown(true);
+		}
+	}, []);
 
 	const handleLandingPageClick = () => {
+		localStorage.setItem('hasVisited', 'true');
 		setLandingPageShown(false);
 	};
 
