@@ -17,11 +17,12 @@ const MehrfamilienComponent: React.FC<MehrfamilienComponentProps> = ({
 	return (
 		<div id={`component-${posIndex}`}>
 			<p className="textBox">
-				Die Stadt München fördert netzgekoppelte PV-Anlagen auf Wohngebäuden mit 300 € pro
-				kWp Leistung. Es gibt zusätzliche Zuschläge für Kombinationen mit Gründächern,
-				Glas-Glas-Modulen, Anlagen auf denkmalgeschützten Häusern und dachintegrierten
-				Anlagen. Beratungsleistungen werden ebenfalls bezuschusst, mit einem Höchstbetrag
-				von 9.000 € für Gebäude mit drei und mehr Wohneinheiten​
+				Förderprogramm Energieeinsparung München: Es unterstützt den Ausbau von
+				Photovoltaikanlagen mit einer Förderung von 200 € je kWp für die ersten 10 kWp und
+				100 € für jedes weitere kWp bis 30 kWp. Fassadenanlagen erhalten 200 € je kWp. Ein
+				Bonuszuschlag von 3.000 € wird für Mieterstromkonzepte und denkmalgeschützte Gebäude
+				gewährt. Die Anlage darf größer gebaut werden, aber nur die ersten 30 kWp sind
+				förderfähig.
 			</p>
 			<ToggleButtonBar
 				options={options}

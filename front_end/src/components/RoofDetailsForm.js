@@ -9,11 +9,42 @@ const RoofDetailsForm = () => {
   const [KWRange, setKWRange] = useState('');
   const [netzanbieter, setNetzanbieter] = useState('');
   const [financingInfo, setFinancingInfo] = useState('');
+  const [estimatePrice, setEstimatePrice] = useState(33000);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Assuming calculation logic is handled here
-    setFinancingInfo(".")
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setFinancingInfo("Show")
+    try {
+      const requestData = {
+        material: material,
+        shape: shape,
+        shading: shading,
+        area: area,
+        storageSystemInterested: storageSystemInterested,
+        KWRange: KWRange,
+        netzanbieter: netzanbieter
+      };
+
+      const response = await fetch('http://localhost:3001/api/estimation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      });
+
+      const data = await response.json();
+      console.log(data);
+
+      if (response.ok) {
+        setEstimatePrice(data.price);
+      } else {
+        console.error('Server error: ', data);
+      }
+
+    } catch (error) {
+      console.error('Error submitting form: ', error);
+    }
   };
 
   return (
@@ -102,7 +133,6 @@ const RoofDetailsForm = () => {
             <option value="3-5kW">3-5 kW</option>
             <option value="5-10kW">5-10 kW</option>
             <option value="10-15kW">10-15 kW</option>
-            {/* Add more options as needed */}
           </select>
         </div>
         <div className="mb-4">
@@ -132,41 +162,41 @@ const RoofDetailsForm = () => {
 
       {financingInfo && (
         <>
-        <div className="textBox">
-          <p>
-            Basierend auf unserer Datenbank, würden wir die Gesamtkosten für die Installation der Solaranlagen auf <strong>33.000 </strong>Euro netto einschätzen. Dieses Ergebnis basiert auf ähnlichen Angeboten von:
-            <br/><br/>
-            - <a href="https://sonnenmacher.de/" style={{color: 'blue'}}>sonnenmacher.de</a>
+          <div className="textBox">
+            <p>
+              Basierend auf unserer Datenbank, würden wir die Gesamtkosten für die Installation der Solaranlagen auf <strong> {estimatePrice} </strong>Euro netto einschätzen. Dieses Ergebnis basiert auf ähnlichen Angeboten von:
+              <br /><br />
+              - <a href="https://sonnenmacher.de/" style={{ color: 'blue' }}>sonnenmacher.de</a>
+              <br />
+              - <a href="https://www.isarphotovoltaik.de/" style={{ color: 'blue' }}>isarphotovoltaik.de</a>
+              <br />
+              - <a href="https://www.schletter-group.com/" style={{ color: 'blue' }}>schletter-group.com</a>
+            </p>
+          </div>
+          <div className="textBox">
+            <p>
+              Zur Deckung dieser Kosten stehen verschiedene Finanzierungsoptionen zur Verfügung:
+            </p>
             <br />
-            - <a href="https://www.isarphotovoltaik.de/" style={{color: 'blue'}}>isarphotovoltaik.de</a>
-            <br />
-            - <a href="https://www.schletter-group.com/" style={{color: 'blue'}}>schletter-group.com</a>
-          </p>
-        </div>
-        <div className="textBox">
-          <p>
-            Zur Deckung dieser Kosten stehen verschiedene Finanzierungsoptionen zur Verfügung:
-          </p>
-          <br/>
-          <ul>
-            <li>
-              <strong>Kauf:</strong> Vollständige Bezahlung der Anlagekosten in einer Summe. Diese Option erfordert sofortige Liquidität, aber es entstehen keine Zinsen oder zusätzliche Finanzierungskosten.
-            </li>
-            <li>
-              <strong>Finanzierung:</strong> Inanspruchnahme eines Kredits zur Deckung der Kosten, wobei der Betrag über einen festgelegten Zeitraum zurückgezahlt wird. Diese Option führt zu zusätzlichen Kosten in Form von Zinsen.
-            </li>
-            <li>
-              <strong>Teilfinanzierung:</strong> Eine Kombination aus teilweiser sofortiger Bezahlung und Finanzierung des Restbetrags. Diese Methode reduziert die erforderliche sofortige Liquidität und die Gesamtfinanzierungskosten im Vergleich zur vollständigen Finanzierung.
-            </li>
-            <li>
-              <strong>Mieten:</strong> Anstatt die Anlage zu kaufen, wird sie gemietet. Diese Option vermeidet hohe Anfangsinvestitionen und kann Wartung und Service beinhalten, führt aber zu regelmäßigen Mietzahlungen über einen vereinbarten Zeitraum.
-            </li>
-            <li>
-              <strong>Energy Community (Energiegemeinschaft):</strong> Eine Energiegemeinschaft ist eine Gruppe von Personen oder Organisationen, die sich zusammenschließen, um gemeinsam Energieerzeugungsanlagen, wie Solaranlagen, zu finanzieren und zu errichten.
-            </li>
-          </ul>
-        </div>
-      </>      
+            <ul>
+              <li>
+                <strong>Kauf:</strong> Vollständige Bezahlung der Anlagekosten in einer Summe. Diese Option erfordert sofortige Liquidität, aber es entstehen keine Zinsen oder zusätzliche Finanzierungskosten.
+              </li>
+              <li>
+                <strong>Finanzierung:</strong> Inanspruchnahme eines Kredits zur Deckung der Kosten, wobei der Betrag über einen festgelegten Zeitraum zurückgezahlt wird. Diese Option führt zu zusätzlichen Kosten in Form von Zinsen.
+              </li>
+              <li>
+                <strong>Teilfinanzierung:</strong> Eine Kombination aus teilweiser sofortiger Bezahlung und Finanzierung des Restbetrags. Diese Methode reduziert die erforderliche sofortige Liquidität und die Gesamtfinanzierungskosten im Vergleich zur vollständigen Finanzierung.
+              </li>
+              <li>
+                <strong>Mieten:</strong> Anstatt die Anlage zu kaufen, wird sie gemietet. Diese Option vermeidet hohe Anfangsinvestitionen und kann Wartung und Service beinhalten, führt aber zu regelmäßigen Mietzahlungen über einen vereinbarten Zeitraum.
+              </li>
+              <li>
+                <strong>Energy Community (Energiegemeinschaft):</strong> Eine Energiegemeinschaft ist eine Gruppe von Personen oder Organisationen, die sich zusammenschließen, um gemeinsam Energieerzeugungsanlagen, wie Solaranlagen, zu finanzieren und zu errichten.
+              </li>
+            </ul>
+          </div>
+        </>
       )}
     </div>
   );

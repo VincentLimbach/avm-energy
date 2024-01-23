@@ -1,13 +1,12 @@
 import React from 'react';
 import ToggleButtonBar from './ToggleButtonBar';
-
-type MehrfamilienComponentProps = {
+type SonstigeBuildingComponentProps = {
 	setList: (index: number, option: string) => void;
 	componentList: Array<string | null>;
 	posIndex: number;
 };
 
-const MehrfamilienComponent: React.FC<MehrfamilienComponentProps> = ({
+const SonstigeBuildingComponent: React.FC<SonstigeBuildingComponentProps> = ({
 	setList,
 	componentList,
 	posIndex
@@ -17,11 +16,11 @@ const MehrfamilienComponent: React.FC<MehrfamilienComponentProps> = ({
 	return (
 		<div id={`component-${posIndex}`}>
 			<p className="textBox">
-				Die Stadt München fördert netzgekoppelte PV-Anlagen auf Wohngebäuden mit 300 € pro
-				kWp Leistung. Es gibt zusätzliche Zuschläge für Kombinationen mit Gründächern,
-				Glas-Glas-Modulen, Anlagen auf denkmalgeschützten Häusern und dachintegrierten
-				Anlagen. Beratungsleistungen werden ebenfalls bezuschusst, mit einem Höchstbetrag
-				von 9.000 € für Gebäude mit drei und mehr Wohneinheiten​
+				Mehrfamilienhäuser sind Wohngebäude, die so konzipiert sind, dass sie mehreren
+				Familien oder Haushalten gleichzeitig als Wohnraum dienen. Sie bestehen
+				typischerweise aus mehreren Wohneinheiten, die sich in einem einzigen Gebäude
+				befinden. Jede Wohneinheit ist in der Regel eine selbstständige Wohnung, die über
+				eigene notwendige Einrichtungen wie Küche, Bad und Schlafbereiche verfügt.
 			</p>
 			<ToggleButtonBar
 				options={options}
@@ -33,4 +32,4 @@ const MehrfamilienComponent: React.FC<MehrfamilienComponentProps> = ({
 	);
 };
 
-export default MehrfamilienComponent;
+export default SonstigeBuildingComponent;
